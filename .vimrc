@@ -10,6 +10,7 @@
 " Zyuke added:
 " system clipboard
 set clipboard=unnamedplus
+set relativenumber
 
 "Features {{{1
 "
@@ -169,5 +170,5 @@ map Y y$
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
-
+    
 "------------------------------------------------------------

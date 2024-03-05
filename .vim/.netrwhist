@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/etc/profile.d'
+let g:netrw_dirhist_3='/home/zyuke/.local/share/rofi/themes'
+let g:netrw_dirhist_2='/home/zyuke/Downloads/rofi/basic/.config/rofi'
+let g:netrw_dirhist_1='/sys/class/thermal'
