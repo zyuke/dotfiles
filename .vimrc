@@ -6,7 +6,12 @@
 "              on this file is still a good idea.
 
 "------------------------------------------------------------
-" Features {{{1
+
+" Zyuke added:
+" system clipboard
+set clipboard=unnamedplus
+
+"Features {{{1
 "
 " These options and commands enable some very useful features in Vim, that
 " no user should have to live without.
