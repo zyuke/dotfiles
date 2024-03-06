@@ -8,7 +8,7 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-PS1='\[\e[1;31m\]\u\[\e[1;36m\]@\h\[\e[1;32m\]:\w\[\e[0m\]-$ '
+PS1='\[\e[38;5;167m\][\[\e[38;5;221m\]\u\[\e[38;5;113m\]@\[\e[38;5;38m\]\H\[\e[0m\] \[\e[38;5;133m\]\w\[\e[38;5;167m\]]\[\e[38;5;248m\]\\$\[\e[0m\] '
 
 # alias added by zyuke:
 alias vi="vim"

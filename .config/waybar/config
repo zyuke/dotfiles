@@ -42,7 +42,7 @@
 
     "clock": {
         "interval": 60,
-      	"format": "<span font=\"JetBrainsMonoNL Nerd Font Bold\"> {:%b %e - %H:%M}</span>",
+      	"format": "<span font=\"JetBrainsMonoNL Nerd Font Bold\"> {:%b%e - %H:%M}</span>",
       	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
