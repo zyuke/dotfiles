@@ -43,7 +43,7 @@
     "clock": {
         "interval": 60,
       	"format": "<span font=\"JetBrainsMonoNL Nerd Font Bold\"> {:%H:%M}</span>",
-        "format-alt": "{:%A, %B %d, %Y (%R)}",
+        "format-alt": "<span font=\"JetBrainsMonoNL Nerd Font Bold\">{:%A, %B %d, %Y (%R)}</span>",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
                     "mode"          : "month",
