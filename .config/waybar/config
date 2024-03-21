@@ -89,7 +89,8 @@
     },
 
     "backlight": {
-        "format": "<span font=\"JetBrainsMonoNL Nerd Font Bold\">󰖨 {percent}%</span>",
+        "format": "<span font=\"JetBrainsMonoNL Nerd Font Bold\">{icon} {percent}%</span>",
+	"format-icons": ["󰃜", "󰃛", "󰃚"],
         "tooltip-format": "Brightness" 
     },
 
