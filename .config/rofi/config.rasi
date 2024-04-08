@@ -154,4 +154,5 @@ configuration {
   }
 }
 
-@theme "/home/zyuke/.local/share/rofi/themes/catppuccin-mocha.rasi"
+/*@theme "/home/zyuke/.local/share/rofi/themes/catppuccin-mocha.rasi"*/
+@theme "./tokyonight.rasi"
