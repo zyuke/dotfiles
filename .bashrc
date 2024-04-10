@@ -60,3 +60,6 @@ export SPLIT='v' # to split Kitty vertically
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# define screenshot folder
+export GRIM_DEFAULT_DIR=/home/zyuke/Pictures/Screenshots/
