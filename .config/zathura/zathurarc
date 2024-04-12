@@ -1,3 +1,4 @@
 # Zathura config file
 
 include catppuccin-macchiato
+set selection-clipboard clipboard
