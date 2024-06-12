@@ -63,3 +63,7 @@ eval "$(pyenv init -)"
 
 # define screenshot folder
 export GRIM_DEFAULT_DIR=/home/zyuke/Pictures/Screenshots/
+
+# starship
+eval "$(starship init bash)"
+
