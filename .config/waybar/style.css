@@ -6,10 +6,32 @@
 }
 
 window#waybar {
-    background-color: rgba(36,39,58,0.6);
+    /* background-color: rgba(36,39,58,0.6); */
+    background-color: transparent;
     color: @text;
     transition-property: background-color;
     transition-duration: .5s;
+}
+
+.modules-right {
+    margin: 5px 5px 0px 0px;
+    padding: 0px;
+    background-color: rgba(36,39,58,0.6);
+    border-radius: 5px;
+}
+
+.modules-left {
+    margin: 5px 0px 0px 5px;
+    padding: 0px;
+    background-color: rgba(36,39,58,0.6);
+    border-radius: 5px;
+}
+
+.modules-center {
+    margin: 5px 0px 0px 0px;
+    padding: 0px 10px 0px 10px;
+    background-color: rgba(36,39,58,0.6);
+    border-radius: 5px;
 }
 
 button {
@@ -33,12 +55,7 @@ button:hover {
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
-}
-
-#workspaces button.active {
-    background-color: #64727D;
-    background-color: @overlay0;
-    background-color: @surface1;
+    border-radius: 5px;
 }
 
 #clock,
@@ -63,7 +80,7 @@ button:hover {
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 5px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -78,17 +95,17 @@ button:hover {
 
 #clock {
     color: @lavender;
-    background-color: transparent; 
+    background-color: transparent;
 }
 
 #battery {
-    background-color: transparent; 
+    background-color: transparent;
     color: @pink;
 }
 
 #battery.charging, #battery.plugged {
     color: @green;
-    background-color: transparent;    
+    background-color: transparent;
 }
 
 @keyframes blink {
@@ -108,9 +125,9 @@ button:hover {
     animation-direction: alternate;
 }
 
-label:focus {
-    background-color: #000000;
-}
+/* label:focus { */
+/*     background-color: #000000; */
+/* } */
 
 #cpu {
     background-color: transparent; 
