@@ -45,12 +45,16 @@ gaps inner 5
 # remove title bar
 default_border pixel
 
+### execute start-up apps
+exec /usr/lib/polkit-kde-authentication-agent-1
+exec dunst
+exec udiskie &
+exec_always fcitx5 -d --replace
+
 ### Output configuration
-#
-# Default wallpaper 
+# wallpaper
 output * bg /home/zyuke/Pictures/Wallpaper/wallpaper5.png fill
 output eDP-1 bg /home/zyuke/Pictures/Wallpaper/wallpaper7.png fill
-#
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -60,9 +64,6 @@ output eDP-1 bg /home/zyuke/Pictures/Wallpaper/wallpaper7.png fill
 ### Idle and lock screen configuration
 bindsym ctrl+shift+L exec swaylock --screenshots --clock --indicator --indicator-radius 120 --indicator-thickness 7 --effect-blur 7x5 
 exec swayidle
-
-### input method
-exec_always fcitx5 -d --replace
 
 ### Input configuration
   input "1739:30383:DLL082A:01_06CB:76AF_Touchpad" {

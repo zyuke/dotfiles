@@ -15,6 +15,10 @@ PS1='\[\e[38;5;167m\][\[\e[38;5;221m\]\u\[\e[38;5;113m\]@\[\e[38;5;38m\]\H\[\e[0
 alias vi="vim"
 alias nv="nvim"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias sudo='sudo '
+
+# use vim mode
+set -o vi
 
 # define default editor
 export EDITOR=nvim
