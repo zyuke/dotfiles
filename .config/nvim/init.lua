@@ -103,11 +103,13 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 --  See `:help lua-guide-autocommands`
 
 -- open file at last location
-vim.api.nvim_create_autocmd({ 'BufReadPost' }, {
+vim.api.nvim_create_autocmd('BufReadPost', {
   pattern = { '*' },
+  desc = 'When editing a file, always jump to the last known cursor position',
   callback = function()
-    if vim.fn.line '\'"' > 1 and vim.fn.line '\'"' <= vim.fn.line '$' then
-      vim.api.nvim_exec('normal! g\'"', false)
+    local line = vim.fn.line '\'"'
+    if line >= 1 and line <= vim.fn.line '$' and vim.bo.filetype ~= 'commit' and vim.fn.index({ 'xxd', 'gitrebase' }, vim.bo.filetype) == -1 then
+      vim.cmd 'normal! g`"'
     end
   end,
 })
