@@ -106,7 +106,7 @@ input type:pointer {
     bindsym $mod+Shift+r reload
 
     # shutdown
-    bindsym ctrl+shift+P exec poweroff
+    bindsym $mod+shift+P exec poweroff
 
 ### custom keybinds
     # take screenshot

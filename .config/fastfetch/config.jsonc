@@ -12,7 +12,6 @@
     },
     "modules": [
 	"break",
-	"break",
 	{
             "type": "title",
             "color": {
@@ -69,12 +68,16 @@
             "key": "WM       ",
             "keyColor": "33", 
         },
+        {
+            "type": "uptime",
+            "key": "Uptime   ",
+            "keyColor": "33", 
+        },
         "break",
         {
             "type": "colors",
             "symbol": "circle",
         },
-        "break",
         "break",
     ]
 }

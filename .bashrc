@@ -8,6 +8,8 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+export PATH="/home/zyuke/.local/bin:$PATH"
+
 # define prompt style
 PS1='\[\e[38;5;167m\][\[\e[38;5;221m\]\u\[\e[38;5;113m\]@\[\e[38;5;38m\]\H\[\e[0m\] \[\e[38;5;133m\]\w\[\e[38;5;167m\]]\[\e[38;5;248m\]\\$\[\e[0m\] '
 
@@ -71,3 +73,8 @@ export GRIM_DEFAULT_DIR=/home/zyuke/Pictures/Screenshots/
 # starship
 eval "$(starship init bash)"
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/zyuke/google-cloud-sdk/path.bash.inc' ]; then . '/home/zyuke/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/zyuke/google-cloud-sdk/completion.bash.inc' ]; then . '/home/zyuke/google-cloud-sdk/completion.bash.inc'; fi
