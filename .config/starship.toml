@@ -5,8 +5,8 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
-$cmd_duration\
 $python\
+$cmd_duration\
 $line_break\
 $character"""
 
@@ -72,6 +72,6 @@ format = "[$duration]($style) "
 style = "yellow"
 
 [python]
-format = "[$virtualenv]($style)"
+format = "[$virtualenv]($style) "
 style = "overlay0"
 
