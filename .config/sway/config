@@ -92,7 +92,7 @@ input type:pointer {
     bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+space exec rofi -show drun
+    bindsym $mod+space exec fuzzel
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
