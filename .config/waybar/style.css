@@ -131,7 +131,7 @@ button:hover {
 
 #cpu {
     background-color: transparent; 
-    color: @peach;
+    color: @yellow;
 }
 
 #memory {
@@ -141,12 +141,12 @@ button:hover {
 
 #backlight {
     background-color: transparent;
-    color: @sky;
+    color: @peach;
 }
 
 #network {
     background-color: transparent;
-    color: @green;
+    color: @teal;
 }
 
 #network.disconnected {
@@ -161,7 +161,7 @@ button:hover {
 
 #pulseaudio.muted {
     background-color: transparent;
-    color: #2a5c45;
+    color: @crust;
 }
 
 #temperature {

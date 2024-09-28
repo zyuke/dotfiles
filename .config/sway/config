@@ -50,13 +50,8 @@ exec_always fcitx5 -d --replace
 
 ### Output configuration
 # wallpaper
-output * bg /home/zyuke/Pictures/Wallpaper/wallpaper5.png fill
-output eDP-1 bg /home/zyuke/Pictures/Wallpaper/wallpaper7.png fill
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+output * bg /home/zyuke/pictures/wallpapers/wallpaper1.png fill
+output eDP-1 bg /home/zyuke/pictures/wallpapers/wallpaper0.png fill
 
 ### Idle and lock screen configuration
 set $lock swaylock --screenshots --clock --indicator --indicator-radius 120 --indicator-thickness 7 --effect-blur 7x5
@@ -65,7 +60,7 @@ bindsym ctrl+shift+L exec $lockman
 exec swayidle
 
 ### Input configuration
-input "1739:30383:DLL082A:01_06CB:76AF_Touchpad" {
+input "2362:628:PIXA3854:00_093A:0274_Touchpad" {
     dwt enabled
     tap enabled
     natural_scroll enabled
@@ -109,13 +104,13 @@ input type:pointer {
 
 ### custom keybinds
     # take screenshot
-    set $GRIM_DEFAULT_DIR /home/zyuke/Pictures/Screenshots/
+    set $GRIM_DEFAULT_DIR /home/zyuke/pictures/screenshots/
     bindsym $mod+shift+Z exec grim -g "$(slurp)" $GRIM_DEFAULT_DIR$(date +'%Y-%m-%d-%H:%M:%S_grim.png')
     bindsym $mod+shift+A exec grim -g "$(slurp -o)" $GRIM_DEFAULT_DIR$(date +'%Y-%m-%d-%H:%M:%S_grim.png') 
 
     # change brightness
-    bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
-    bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+    bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
     # change volume
     bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.0 @DEFAULT_SINK@ 5%+
@@ -183,7 +178,6 @@ input type:pointer {
     bindsym $mod+b splith
     bindsym $mod+v splitv
 
-    # Switch the current container between different layout styles
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
