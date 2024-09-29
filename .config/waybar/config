@@ -94,7 +94,7 @@
 
     "battery": {
         "format": "<span font=\"JetBrainsMonoNL Nerd Font Bold\">{icon} {capacity}%</span>",
-        "format-charging": "<span font=\"JetBrainsMonoNL Nerd Font Bold\"> {capacity}%</span>",
+        "format-charging": "<span font=\"JetBrainsMonoNL Nerd Font Bold\"> {capacity}%</span>",
         "format-icons": ["", "", "", "", ""]
     },
 

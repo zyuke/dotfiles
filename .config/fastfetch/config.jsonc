@@ -33,6 +33,7 @@
         },
         {
             "type": "cpu",
+            "format": "AMD Ryzen 7 7840U ({5}) @ {7} Ghz",
             "key": "CPU      ",
             "keyColor": "33",
         },

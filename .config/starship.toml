@@ -41,7 +41,7 @@ mantle = "#1e2030"
 crust = "#181926"
 
 [directory]
-style = "blue"
+style = "lavender"
 
 [character]
 success_symbol = "[❯](pink)"
