@@ -38,21 +38,31 @@ scratchpad_minimize disable
 
 # define window gap
 gaps inner 5
-
 # remove title bar
 default_border pixel
+
+# set cursor theme
+seat seat0 xcursor_theme catppuccin-frappe-dark-cursors 24
+# set gtk cursor and font
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema cursor-theme catppuccin-frappe-dark-cursors
+    gsettings set $gnome-schema font-name JetBrainsMonoNerdFont-Regular
+}
 
 ### execute start-up apps
 # exec /usr/lib/polkit-kde-authentication-agent-1
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec dunst
 exec udiskie &
-exec_always fcitx5 -d --replace
+exec --no-startup-id fcitx5 -d
 
 ### Output configuration
 # wallpaper
 output * bg /home/zyuke/pictures/wallpapers/wallpaper1.png fill
 output eDP-1 bg /home/zyuke/pictures/wallpapers/wallpaper0.png fill
+# custom config for monitor
+output 'ASUSTek COMPUTER INC ROG XG27AQ M7LMQS027213' mode 2560x1440@100Hz
 
 ### Idle and lock screen configuration
 set $lock swaylock --screenshots --clock --indicator --indicator-radius 120 --indicator-thickness 7 --effect-blur 7x5
@@ -83,10 +93,8 @@ input type:pointer {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
-
     # Kill focused window
     bindsym $mod+q kill
-
     # Start your launcher
     bindsym $mod+space exec fuzzel
 
@@ -96,10 +104,8 @@ input type:pointer {
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
-
     # Reload the configuration file
     bindsym $mod+Shift+r reload
-
     # shutdown
     bindsym $mod+shift+P exec poweroff
 
@@ -110,12 +116,12 @@ input type:pointer {
     bindsym $mod+shift+A exec grim -g "$(slurp -o)" $GRIM_DEFAULT_DIR$(date +'%Y-%m-%d-%H:%M:%S_grim.png') 
 
     # change brightness
-    bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
-    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym XF86MonBrightnessUp exec brightnessctl set 1%+
+    bindsym XF86MonBrightnessDown exec brightnessctl set 1%-
 
     # change volume
-    bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.0 @DEFAULT_SINK@ 5%+
-    bindsym XF86AudioLowerVolume exec wpctl set-volume -l 1.0 @DEFAULT_SINK@ 5%-
+    bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.0 @DEFAULT_SINK@ 1%+
+    bindsym XF86AudioLowerVolume exec wpctl set-volume -l 1.0 @DEFAULT_SINK@ 1%-
     bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
 
     # toggle screen when lid is on/off
