@@ -102,7 +102,7 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "<span font=\"JetBrainsMonoNL Nerd Font Bold\">{icon} {signalStrength}%</span>",
         "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
-        "tooltip-format": "{essid}\n{ifname} via {gwaddr} ",
+        "tooltip-format": "{essid}\n{ifname} via {gwaddr}",
         "format-disconnected": "Disconnected ⚠"
     },
 
