@@ -1,2 +1,24 @@
 [Default Applications]
 application/pdf=org.pwmt.zathura-pdf-poppler.desktop
+x-scheme-handler/http=userapp-Nightly-UAGYV2.desktop
+x-scheme-handler/https=userapp-Nightly-UAGYV2.desktop
+x-scheme-handler/chrome=userapp-Nightly-UAGYV2.desktop
+text/html=userapp-Nightly-UAGYV2.desktop
+application/x-extension-htm=userapp-Nightly-UAGYV2.desktop
+application/x-extension-html=userapp-Nightly-UAGYV2.desktop
+application/x-extension-shtml=userapp-Nightly-UAGYV2.desktop
+application/xhtml+xml=userapp-Nightly-UAGYV2.desktop
+application/x-extension-xhtml=userapp-Nightly-UAGYV2.desktop
+application/x-extension-xht=userapp-Nightly-UAGYV2.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Nightly-UAGYV2.desktop;
+x-scheme-handler/https=userapp-Nightly-UAGYV2.desktop;
+x-scheme-handler/chrome=userapp-Nightly-UAGYV2.desktop;
+text/html=userapp-Nightly-UAGYV2.desktop;
+application/x-extension-htm=userapp-Nightly-UAGYV2.desktop;
+application/x-extension-html=userapp-Nightly-UAGYV2.desktop;
+application/x-extension-shtml=userapp-Nightly-UAGYV2.desktop;
+application/xhtml+xml=userapp-Nightly-UAGYV2.desktop;
+application/x-extension-xhtml=userapp-Nightly-UAGYV2.desktop;
+application/x-extension-xht=userapp-Nightly-UAGYV2.desktop;

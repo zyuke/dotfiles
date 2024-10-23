@@ -62,7 +62,7 @@ exec --no-startup-id fcitx5 -d
 output * bg /home/zyuke/pictures/wallpapers/wallpaper1.png fill
 output eDP-1 bg /home/zyuke/pictures/wallpapers/wallpaper0.png fill
 # custom config for monitor
-output 'ASUSTek COMPUTER INC ROG XG27AQ M7LMQS027213' scale 1.15 mode 2560x1440@100Hz
+output 'ASUSTek COMPUTER INC ROG XG27AQ M7LMQS027213' scale 1.25 mode 2560x1440@100Hz
 
 ### Idle and lock screen configuration
 set $lock swaylock --screenshots --clock --indicator --indicator-radius 120 --indicator-thickness 7 --effect-blur 7x5
