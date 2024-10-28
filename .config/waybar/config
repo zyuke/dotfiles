@@ -5,6 +5,7 @@
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
 	"margin-top": 1,
+	"ipc": true,
 
     // Choose the order of the modules
     "modules-left": ["clock"],

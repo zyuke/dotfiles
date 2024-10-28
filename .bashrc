@@ -46,9 +46,7 @@ export GRIM_DEFAULT_DIR=/home/zyuke/Pictures/Screenshots/
 # starship
 eval "$(starship init bash)"
 
-#
 # google cloud cli configs
-#
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/zyuke/google-cloud-sdk/path.bash.inc' ]; then . '/home/zyuke/google-cloud-sdk/path.bash.inc'; fi
 # The next line enables shell command completion for gcloud.
