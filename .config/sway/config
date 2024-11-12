@@ -244,7 +244,7 @@ bindsym $mod+r mode "resize"
 bar {
     position top
     swaybar_command waybar
-    mode hide
+    # mode hide
     modifier none
 }
 bindsym $mod+o bar mode toggle
