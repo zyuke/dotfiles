@@ -10,6 +10,8 @@ application/x-extension-shtml=userapp-Nightly-UAGYV2.desktop
 application/xhtml+xml=userapp-Nightly-UAGYV2.desktop
 application/x-extension-xhtml=userapp-Nightly-UAGYV2.desktop
 application/x-extension-xht=userapp-Nightly-UAGYV2.desktop
+image/png=org.nomacs.ImageLounge.desktop
+image/jpg=org.nomacs.ImageLounge.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-Nightly-UAGYV2.desktop;

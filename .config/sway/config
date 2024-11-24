@@ -10,8 +10,6 @@ set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
-set $term kitty
 
 ### Appearance
 # window corner radius in px
@@ -40,6 +38,8 @@ scratchpad_minimize disable
 gaps inner 5
 # remove title bar
 default_border pixel
+# inhibit idle
+for_window [shell=".*"] inhibit_idle fullscreen
 
 # set cursor theme
 seat seat0 xcursor_theme catppuccin-frappe-dark-cursors 24
@@ -96,7 +96,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+Return exec kitty
     # Kill focused window
     bindsym $mod+q kill
     # Start your launcher
@@ -112,8 +112,9 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym $mod+Shift+r reload
     # shutdown
     bindsym $mod+shift+P exec poweroff
-    # exec btop
-    bindsym $mod+e exec kitty -e btop
+    # launching some apps
+    bindsym $mod+e exec kitty -e yazi
+    bindsym $mod+m exec kitty -e btop
 
 ### custom keybinds
     # take screenshot
@@ -205,12 +206,8 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 #
 # Scratchpad:
 #
-    # Sway has a "scratchpad", which is a bag of holding for windows.
-    # You can send windows there and get them back later.
-
     # Move the currently focused window to the scratchpad
     bindsym $mod+Shift+s move scratchpad
-
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+s scratchpad show
@@ -288,5 +285,3 @@ client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 include /etc/sway/config.d/*
-
-

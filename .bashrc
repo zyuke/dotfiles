@@ -10,10 +10,11 @@ alias grep='grep --color=auto'
 export PATH="/home/zyuke/.local/bin:$PATH"
 
 # alias added by zyuke:
-alias vi="vim"
-alias nv="nvim"
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias vi='vim'
+alias nv='nvim'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias sudo='sudo '
+alias lg='lazygit'
 
 # use bash vim mode
 set -o vi
@@ -41,7 +42,7 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # define screenshot folder
-export GRIM_DEFAULT_DIR=/home/zyuke/Pictures/Screenshots/
+export GRIM_DEFAULT_DIR=/home/zyuke/pictures/screenshots/
 
 # starship
 eval "$(starship init bash)"
