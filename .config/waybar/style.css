@@ -9,7 +9,6 @@
 
 window#waybar {
     background-color: rgba(0,0,0,0);
-    /* background-color: transparent; */
     margin: 5px 5px 5px 5px;
     transition-property: background-color;
     transition-duration: .5s;
@@ -44,8 +43,8 @@ button:hover {
 }
 #workspaces button {
     padding: 0 5px;
-    background-color: transparent;
     color: @text;
+    background-color: transparent;
     transition: all 0.3s ease;
 }
 #workspaces button:hover {
@@ -53,8 +52,8 @@ button:hover {
     border-radius: 5px;
     transition: all 0.3s ease;
 }
-#workspaces button.active {
-    color: @red;
+#workspaces button.focused {
+    color: @flamingo;
     transition: all 0.3s ease;
     animation: colored-gradient 10s ease infinite;
 }
@@ -98,9 +97,9 @@ button:hover {
 }
 
 #tray {
-    color: @flamingo;
     background-color: transparent;
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 #tray > .passive {
     -gtk-icon-effect: dim;
@@ -115,14 +114,14 @@ button:hover {
 #pulseaudio.audio {
     background-color: transparent;
     color: @lavender;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 #pulseaudio.audio.muted {
     background-color: transparent;
     color: @crust;
 }
 #pulseaudio-slider {
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 #pulseaudio-slider slider {
     min-height: 0px;

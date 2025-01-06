@@ -9,7 +9,7 @@
     "ipc": true,
 
     // Choose the order of the modules
-    "modules-left": ["tray", "pulseaudio/slider", "pulseaudio#audio", "backlight", "network", "cpu", "memory", "temperature", "battery", "power-profiles-daemon"],
+    "modules-left": ["tray", "battery", "pulseaudio/slider", "pulseaudio#audio", "backlight", "network", "cpu", "memory", "temperature", "power-profiles-daemon"],
     "modules-center": ["sway/workspaces"],
     "modules-right": ["clock"],
 
@@ -29,6 +29,9 @@
             "9": "9",
 	    "0": "10",
             "default": "1",
+        },
+        "persistent-workspaces": {
+            "1": ["eDP-1"],
         },
         "on-click": "activate"
     },
@@ -50,7 +53,7 @@
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
         "tooltip": true,
-        "tooltip-format": "Volume: {volume}%",
+        "tooltip-format": "{desc}\nVolume: {volume}%",
     },
 
     "pulseaudio/slider": {
