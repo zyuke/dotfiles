@@ -15,6 +15,7 @@ alias nv='nvim'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias sudo='sudo '
 alias lg='lazygit'
+alias ni='neovide'
 
 # use bash vim mode
 set -o vi
