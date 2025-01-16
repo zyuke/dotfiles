@@ -42,7 +42,7 @@ button:hover {
 #workspaces {
 }
 #workspaces button {
-    padding: 0 5px;
+    padding: 0px;
     color: @text;
     background-color: transparent;
     transition: all 0.3s ease;
@@ -121,7 +121,8 @@ button:hover {
     color: @crust;
 }
 #pulseaudio-slider {
-    /* margin-top: 5px; */
+    margin: 10 0 10 0px;
+    padding: 0px;
 }
 #pulseaudio-slider slider {
     min-height: 0px;
