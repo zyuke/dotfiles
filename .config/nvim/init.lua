@@ -319,7 +319,7 @@ require('lazy').setup({
       -- search by grep (including hidden files)
       vim.keymap.set('n', '<leader>sg', function()
         builtin.live_grep {
-          file_ignore_patterns = { '.venv' },
+          file_ignore_patterns = { '.venv', '.git' },
           additional_args = function(_)
             return { '--hidden' }
           end,
@@ -329,7 +329,7 @@ require('lazy').setup({
       -- search file (including hidden files)
       vim.keymap.set('n', '<leader>sf', function()
         builtin.find_files {
-          file_ignore_patterns = { '.venv' },
+          file_ignore_patterns = { '.venv', '.git' },
           hidden = true,
         }
       end, { desc = '[S]earch [F]iles' })

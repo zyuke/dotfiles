@@ -73,8 +73,10 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{icon}",
         "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+        "format-ethernet": "",
         "format-disconnected": "⚠",
         "tooltip-format": "{essid}\n{ifname} via {gwaddr}",
+        "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected",
     },
 
