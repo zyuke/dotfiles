@@ -10,6 +10,27 @@ if vim.g.neovide then
   vim.keymap.set('i', '<C-v>', '<ESC>l"+Pli') -- Paste insert mode
 end
 
+-- tab management keybinds
+local tab_keymap = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+-- Move to previous/next
+tab_keymap('n', '<A-h>', '<Cmd>BufferPrevious<CR>', opts)
+tab_keymap('n', '<A-l>', '<Cmd>BufferNext<CR>', opts)
+-- -- Re-order to previous/next
+tab_keymap('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
+tab_keymap('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
+-- -- Goto buffer in position...
+tab_keymap('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
+tab_keymap('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
+tab_keymap('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', opts)
+tab_keymap('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', opts)
+tab_keymap('n', '<A-5>', '<Cmd>BufferGoto 5<CR>', opts)
+tab_keymap('n', '<A-6>', '<Cmd>BufferGoto 6<CR>', opts)
+tab_keymap('n', '<A-7>', '<Cmd>BufferGoto 7<CR>', opts)
+tab_keymap('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', opts)
+tab_keymap('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
+tab_keymap('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
+
 -- Allow clipboard copy paste in neovim
 vim.api.nvim_set_keymap('', '<C-v>', '+p<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('!', '<C-v>', '<C-R>+', { noremap = true, silent = true })
@@ -696,7 +717,7 @@ require('lazy').setup({
   },
 
   -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  { 'folke/todo-comments.nvim', event = 'VeryLazy', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
