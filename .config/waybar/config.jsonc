@@ -43,7 +43,7 @@
 
     "pulseaudio#audio": {
         "format": "{icon}",
-        "format-bluetooth": "{󰂯{icon}}",
+        "format-muted": "󰟎",
         "format-icons": {
             "headphone": "󰋋",
             "headset": "󰋋",

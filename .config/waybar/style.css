@@ -118,7 +118,7 @@ button:hover {
 }
 #pulseaudio.audio.muted {
     background-color: transparent;
-    color: @crust;
+    color: @red;
 }
 #pulseaudio-slider {
     margin: 10 0 10 0px;
