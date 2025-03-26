@@ -34,9 +34,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# zoxide
-eval "$(zoxide init bash)"
-
 # set up pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -58,3 +55,6 @@ if [ -f '/home/zyuke/google-cloud-sdk/path.bash.inc' ]; then . '/home/zyuke/goog
 if [ -f '/home/zyuke/google-cloud-sdk/completion.bash.inc' ]; then . '/home/zyuke/google-cloud-sdk/completion.bash.inc'; fi
 # fix for DNS issue
 export GRPC_DNS_RESOLVER=native
+
+# zoxide
+eval "$(zoxide init bash)"
