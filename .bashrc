@@ -39,22 +39,15 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# define screenshot folder
-export GRIM_DEFAULT_DIR=/home/zyuke/pictures/screenshots/
-
 # starship
 eval "$(starship init bash)"
 
 # thefuck
 eval $(thefuck --alias)
 
-# google cloud cli configs
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/zyuke/google-cloud-sdk/path.bash.inc' ]; then . '/home/zyuke/google-cloud-sdk/path.bash.inc'; fi
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/zyuke/google-cloud-sdk/completion.bash.inc' ]; then . '/home/zyuke/google-cloud-sdk/completion.bash.inc'; fi
-# fix for DNS issue
-export GRPC_DNS_RESOLVER=native
-
 # zoxide
 eval "$(zoxide init bash)"
+
+# atuin
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash --disable-up-arrow)"

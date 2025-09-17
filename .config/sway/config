@@ -118,7 +118,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 
 ### custom keybinds
     # take screenshot
-    set $GRIM_DEFAULT_DIR /home/zyuke/pictures/screenshots/
+    set $GRIM_DEFAULT_DIR /home/zyuke/images/screenshots/
     bindsym $mod+shift+Z exec grim -g "$(slurp)" $GRIM_DEFAULT_DIR$(date +'%Y-%m-%d-%H:%M:%S_grim.png')
     bindsym $mod+shift+A exec grim -g "$(slurp -o)" $GRIM_DEFAULT_DIR$(date +'%Y-%m-%d-%H:%M:%S_grim.png') 
 
