@@ -61,7 +61,7 @@ exec --no-startup-id fcitx5 -d
 output * bg /home/zyuke/images/wallpapers/wallpaper2.png fill
 output eDP-1 pos 0 0 scale 2 bg /home/zyuke/images/wallpapers/wallpaper3.png fill
 # custom config for monitor
-output 'Microstep MPG321UX OLED 0x01010101' scale 1.25 mode 3840x2160@120Hz
+output 'Microstep MPG321UX OLED 0x01010101' scale 1.5 mode 3840x2160@120Hz
 
 ### Idle and lock screen configuration
 set $lock swaylock --screenshots --clock --indicator --indicator-radius 120 --indicator-thickness 7 --effect-blur 7x5
@@ -79,7 +79,7 @@ input "2362:628:PIXA3854:00_093A:0274_Touchpad" {
 
 input type:pointer {
     accel_profile flat
-    pointer_accel 0.5
+    pointer_accel 0.1
 }
 
 # remap laptop keys

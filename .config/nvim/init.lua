@@ -1,41 +1,29 @@
 -- Zyuke's nvim config (from nvim.kickstart)
 
--- neovide settings
-if vim.g.neovide then
-  vim.keymap.set('c', '<C-v>', '<C-R>+') -- Paste command mode
-  vim.keymap.set('i', '<C-v>', '<ESC>l"+Pli') -- Paste insert mode
-end
-
 -- tab management keybinds
 local tab_keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 -- Move to previous/next
-tab_keymap('n', '<A-h>', '<Cmd>BufferPrevious<CR>', opts)
-tab_keymap('n', '<A-l>', '<Cmd>BufferNext<CR>', opts)
+tab_keymap('n', '<C-h>', '<Cmd>BufferPrevious<CR>', opts)
+tab_keymap('n', '<C-l>', '<Cmd>BufferNext<CR>', opts)
 -- -- Re-order to previous/next
-tab_keymap('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
-tab_keymap('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
+-- tab_keymap('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
+-- tab_keymap('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
 -- -- Goto buffer in position...
-tab_keymap('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
-tab_keymap('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
-tab_keymap('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', opts)
-tab_keymap('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', opts)
-tab_keymap('n', '<A-5>', '<Cmd>BufferGoto 5<CR>', opts)
-tab_keymap('n', '<A-6>', '<Cmd>BufferGoto 6<CR>', opts)
-tab_keymap('n', '<A-7>', '<Cmd>BufferGoto 7<CR>', opts)
-tab_keymap('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', opts)
-tab_keymap('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
-tab_keymap('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
-
--- Allow clipboard copy paste in neovim
--- vim.api.nvim_set_keymap('', '<C-v>', '+p<CR>', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('!', '<C-v>', '<C-R>+', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('t', '<C-v>', '<C-R>+', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('v', '<C-v>', '<C-R>+', { noremap = true, silent = true })
+tab_keymap('n', '<C-1>', '<Cmd>BufferGoto 1<CR>', opts)
+tab_keymap('n', '<C-2>', '<Cmd>BufferGoto 2<CR>', opts)
+tab_keymap('n', '<C-3>', '<Cmd>BufferGoto 3<CR>', opts)
+tab_keymap('n', '<C-4>', '<Cmd>BufferGoto 4<CR>', opts)
+tab_keymap('n', '<C-5>', '<Cmd>BufferGoto 5<CR>', opts)
+tab_keymap('n', '<C-6>', '<Cmd>BufferGoto 6<CR>', opts)
+tab_keymap('n', '<C-7>', '<Cmd>BufferGoto 7<CR>', opts)
+tab_keymap('n', '<C-8>', '<Cmd>BufferGoto 8<CR>', opts)
+tab_keymap('n', '<C-9>', '<Cmd>BufferGoto 9<CR>', opts)
+tab_keymap('n', '<C-0>', '<Cmd>BufferLast<CR>', opts)
 
 -- set tab space
-vim.opt['tabstop'] = 4
-vim.opt['shiftwidth'] = 4
+vim.o['tabstop'] = 4
+vim.o['shiftwidth'] = 4
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -47,66 +35,68 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
--- See `:help vim.opt`
+-- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
 -- Make line numbers default
-vim.opt.number = true
-vim.opt.relativenumber = true
+vim.o.number = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = 'a'
+vim.o.mouse = 'a'
 
 -- Don't show the mode, since it's already in status line
-vim.opt.showmode = false
+vim.o.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.opt.clipboard = 'unnamedplus'
+vim.schedule(function()
+  vim.o.clipboard = 'unnamedplus'
+end)
 
 -- Enable break indent
-vim.opt.breakindent = true
+vim.o.breakindent = true
 
 -- Save undo history
-vim.opt.undofile = true
+vim.o.undofile = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+vim.o.signcolumn = 'yes'
 
 -- Decrease update time
-vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
 
 -- Configure how new splits should be opened
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+vim.o.splitright = true
+vim.o.splitbelow = true
 
 -- Sets how neovim will display certain whitespace in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
+vim.o.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
+vim.o.inccommand = 'split'
 
 -- Show which line your cursor is on
-vim.opt.cursorline = true
+vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.o.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
-vim.opt.hlsearch = true
+vim.o.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
@@ -122,18 +112,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
--- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
---
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
--- [[ Basic Autocommands ]]
---  See `:help lua-guide-autocommands`
 
 -- open file at last location
 vim.api.nvim_create_autocmd('BufReadPost', {
