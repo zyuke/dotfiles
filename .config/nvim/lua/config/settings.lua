@@ -5,6 +5,11 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Neovide settings
+if vim.g.neovide then
+  vim.g.neovide_scale_factor = 1.0
+end
+
 -- Set tab space
 vim.o['tabstop'] = 4
 vim.o['shiftwidth'] = 4

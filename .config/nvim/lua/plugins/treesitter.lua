@@ -1,16 +1,16 @@
 -- Highlight, edit, and navigate code
 return {
   'nvim-treesitter/nvim-treesitter',
-  event = 'VeryLazy',
   build = ':TSUpdate',
-  opts = {
-    ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'python' },
-    auto_install = true,
-    highlight = { enable = true },
-    indent = { enable = true },
-  },
-  config = function(_, opts)
+  config = function()
+    local filetypes = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'python' }
+
     ---@diagnostic disable-next-line: missing-fields
-    require('nvim-treesitter.configs').setup(opts)
+    require('nvim-treesitter.configs').setup({
+      ensure_installed = filetypes,
+      auto_install = true,
+      highlight = { enable = true },
+      indent = { enable = true },
+    })
   end,
 }
