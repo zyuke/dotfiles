@@ -58,8 +58,8 @@ exec --no-startup-id fcitx5 -d
 
 ### Output configuration
 # wallpaper
-output * bg /home/zyuke/images/wallpapers/wallpaper2.png fill
-output eDP-1 pos 0 0 scale 2 bg /home/zyuke/images/wallpapers/wallpaper3.png fill
+output * bg /home/zyuke/images/wallpapers/wallpaper4.png fill
+output eDP-1 pos 0 0 scale 2 bg /home/zyuke/images/wallpapers/wallpaper5.png fill
 # custom config for monitor
 output 'Microstep MPG321UX OLED 0x01010101' scale 1.5 mode 3840x2160@120Hz
 
