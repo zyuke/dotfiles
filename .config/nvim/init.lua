@@ -1,5 +1,3 @@
--- Zyuke's nvim config (from nvim.kickstart)
-
 -- Load general settings (must be first - sets leader key)
 require('config.settings')
 

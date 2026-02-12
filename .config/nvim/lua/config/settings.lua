@@ -11,8 +11,8 @@ if vim.g.neovide then
 end
 
 -- Set tab space
-vim.o['tabstop'] = 4
-vim.o['shiftwidth'] = 4
+-- vim.o['tabstop'] = 4
+-- vim.o['shiftwidth'] = 4
 
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true

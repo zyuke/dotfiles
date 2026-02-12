@@ -1,7 +1,31 @@
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
 
-# Aliases
+# zsh settings
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+
+setopt HIST_IGNORE_ALL_DUPS    # no duplicate commands
+setopt HIST_REDUCE_BLANKS      # trim extra spaces
+setopt INC_APPEND_HISTORY      # write history immediately
+setopt SHARE_HISTORY           # share across terminals
+setopt EXTENDED_HISTORY        # timestamps
+
+eval "$(dircolors -b)"         # Load GNU dircolors
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+setopt AUTO_CD              # cd by typing folder name
+setopt CORRECT              # typo correction
+setopt INTERACTIVE_COMMENTS # allow comments in shell
+setopt NO_BEEP              # silence
+
+# aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias vi='vim'
@@ -11,11 +35,11 @@ alias sudo='sudo '        # allows alias expansion after sudo
 alias lg='lazygit'
 alias ni='neovide'
 
-# Vi mode (zsh-style)
+# vi mode
 bindkey -v
 export KEYTIMEOUT=1
 
-# Default editor
+# default editor
 export EDITOR=nvim
 export VISUAL=nvim
 
@@ -34,9 +58,6 @@ y() {
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-
-# thefuck
-eval "$(thefuck --alias)"
 
 # zoxide
 eval "$(zoxide init zsh)"
