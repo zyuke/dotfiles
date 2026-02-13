@@ -8,6 +8,10 @@ local opts = { noremap = true, silent = true }
 tab_keymap('n', '<C-h>', '<Cmd>BufferPrevious<CR>', opts)
 tab_keymap('n', '<C-l>', '<Cmd>BufferNext<CR>', opts)
 
+-- use ctrl+v to paste in insert and command mode
+vim.keymap.set("i", "<C-v>", "<C-r>+", { noremap = true })
+vim.keymap.set("c", "<C-v>", "<C-r>+", { noremap = true })
+
 -- Close current buffer
 vim.keymap.set('n', '<leader>q', ':bd<CR>', { silent = true })
 
