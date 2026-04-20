@@ -12,6 +12,7 @@ application/x-extension-xhtml=userapp-Nightly-H97VX2.desktop
 application/x-extension-xht=userapp-Nightly-H97VX2.desktop
 image/png=org.nomacs.ImageLounge.desktop
 image/jpeg=org.nomacs.ImageLounge.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-Nightly-UAGYV2.desktop;userapp-Nightly-H97VX2.desktop;

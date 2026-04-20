@@ -94,7 +94,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
         local buf = event.buf
 
         -- Find references for the word under your cursor.
-        vim.keymap.set('n', 'gr', builtin.lsp_references, { buffer = buf, desc = '[G]oto [R]eferences' })
+        vim.keymap.set('n', 'grr', builtin.lsp_references, { buffer = buf, desc = '[G]oto [R]eferences' })
 
         -- Jump to the implementation of the word under your cursor.
         -- Useful when your language has ways of declaring types without an actual implementation.

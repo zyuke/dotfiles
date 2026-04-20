@@ -122,7 +122,7 @@ return {
       -- clangd = {},
       -- gopls = {},
       pyright = {},
-      -- rust_analyzer = {},
+      rust_analyzer = {},
       --
       -- Some languages (like typescript) have entire language plugins that can be useful:
       --    https://github.com/pmizio/typescript-tools.nvim
@@ -138,11 +138,14 @@ return {
     --    :Mason
     --
     -- You can press `g?` for help in this menu.
-    local ensure_installed = vim.tbl_keys(servers or {})
-    vim.list_extend(ensure_installed, {
+    --
+    -- Note: Use Mason package names (with hyphens), not LSP names
+    local ensure_installed = {
       'lua-language-server', -- Lua Language server
+      'rust-analyzer', -- Rust Language server
+      'pyright', -- Python Language server
       -- You can add other tools here that you want Mason to install
-    })
+    }
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
