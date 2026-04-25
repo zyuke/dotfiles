@@ -1,5 +1,5 @@
 #!/bin/sh
-# Times the screen off and suspends — adapted from sway/lockman.sh for niri
+# Times the screen off and suspends
 swayidle \
     timeout 15 'niri msg action power-off-monitors' \
     resume 'true' \
