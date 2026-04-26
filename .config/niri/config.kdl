@@ -123,13 +123,14 @@ layer-rule {
     place-within-backdrop true
 }
 
-// Enable blur behind the fuzzel launcher.
-// layer-rule {
-//     match namespace="^launcher$"
-//     background-effect {
-//         blur true
-//     }
-// }
+// Enable blur
+layer-rule {
+    match namespace="waybar"
+    background-effect {
+        blur true
+        xray false
+    }
+}
 
 // Optionally, disable the workspace shadows in the overview.
 overview {

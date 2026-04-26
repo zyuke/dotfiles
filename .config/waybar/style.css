@@ -19,11 +19,11 @@ tooltip label {
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0);
-    margin: 5px 5px 5px 5px;
+    background-color: rgba(0,0,0,0.4);
+    margin: 0px 0px 0px 0px;
     transition-property: background-color;
     transition-duration: .5s;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 .modules-right {
@@ -69,7 +69,14 @@ button:hover {
     animation: colored-gradient 10s ease infinite;
 }
 
-#clock,
+#clock {
+    margin: 0px 0px 5px 0px
+}
+
+#tray {
+    margin: 5px 0px 0px 0px
+}
+
 #battery,
 #cpu,
 #memory,
@@ -81,7 +88,6 @@ button:hover {
 #power-profiles-daemon,
 #wireplumber,
 #custom-media,
-#tray,
 #mode,
 #idle_inhibitor,
 #scratchpad,

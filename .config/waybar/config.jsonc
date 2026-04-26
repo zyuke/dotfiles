@@ -3,9 +3,9 @@
     "position": "left", // Waybar position (top|bottom|left|right)
     "width": 26, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
-    "margin-top": 5,
-    "margin-left": 5,
-    "margin-bottom": 5,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-bottom": 0,
     "ipc": true,
 
     // Choose the order of the modules
