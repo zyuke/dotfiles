@@ -43,7 +43,7 @@ export KEYTIMEOUT=1
 export EDITOR=nvim
 export VISUAL=nvim
 
-# yazi wrapper (works unchanged in zsh)
+# yazi wrapper
 y() {
   local tmp
   tmp="$(mktemp -t yazi-cwd.XXXXXX)"

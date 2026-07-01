@@ -64,7 +64,7 @@ button:hover {
     transition: all 0.3s ease;
 }
 #workspaces button.focused {
-    color: @flamingo;
+    color: @lavender;
     transition: all 0.3s ease;
     animation: colored-gradient 10s ease infinite;
 }
