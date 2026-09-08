@@ -1,0 +1,15 @@
+# wpaperd configuration
+# Docs: https://github.com/danyspin97/wpaperd
+#
+# [default] applies to every output (laptop screen + external monitor),
+# so both use the same wallpaper directory and settings.
+
+[default]
+path = "/home/zyuke/images/wallpapers"
+duration = "30m"
+sorting = "random"
+
+# Fade transition
+transition-time = 300
+
+[default.transition.fade]

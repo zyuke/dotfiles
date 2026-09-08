@@ -45,11 +45,9 @@ spawn-at-startup "udiskie"
 spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "waybar"
 spawn-at-startup "swayidle"
+spawn-at-startup "wpaperd"
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface cursor-theme catppuccin-frappe-dark-cursors"
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface font-name JetBrainsMonoNerdFont-Regular"
-// Wallpaper — single swaybg handles all outputs to avoid startup races
-spawn-sh-at-startup "swaybg -o eDP-1 -i /home/zyuke/images/wallpapers/wallpaper5.png -m fill -o DP-3 -i /home/zyuke/images/wallpapers/wallpaper4.png -m fill"
-// Check initial lid state (for automatic lid events on open/close, set up a udev rule calling this script)
 spawn-at-startup "/home/zyuke/.config/niri/clamshell.sh"
 
 hotkey-overlay {
@@ -118,15 +116,23 @@ layout {
 
 // Make the wallpaper stationary, rather than moving with workspaces.
 layer-rule {
-    // This is for swaybg; change for other wallpaper tools.
-    // Find the right namespace by running niri msg layers.
-    match namespace="^wallpaper$"
+    // This is for wpaperd, which names its surfaces "wpaperd-<output>"
+    match namespace="^wpaperd-"
     place-within-backdrop true
 }
 
-// Enable blur
+// Enable blur for waybar
 layer-rule {
     match namespace="waybar"
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+// Neovide has no Wayland blur protocol of its own, so blur it here.
+window-rule {
+    match app-id="^neovide$"
     background-effect {
         blur true
         xray false
