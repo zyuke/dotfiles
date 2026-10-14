@@ -33,7 +33,6 @@ alias nv='nvim'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias sudo='sudo '        # allows alias expansion after sudo
 alias lg='lazygit'
-alias ni='neovide'
 
 # vi mode
 bindkey -v

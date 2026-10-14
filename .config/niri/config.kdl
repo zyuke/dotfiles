@@ -37,6 +37,11 @@ output "Microstep MPG321UX OLED 0x01010101" {
     mode "3840x2160@179.999"
     scale 1.5
 }
+output "Toshiba America Info Systems Inc TOSHIBA-TV 0x00000001" {
+    focus-at-startup
+    mode "3840x2160@60.000"
+    scale 1.5
+}
 
 // Startup applications
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
@@ -46,6 +51,8 @@ spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "waybar"
 spawn-at-startup "swayidle"
 spawn-at-startup "wpaperd"
+spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
+spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface cursor-theme catppuccin-frappe-dark-cursors"
 spawn-sh-at-startup "gsettings set org.gnome.desktop.interface font-name JetBrainsMonoNerdFont-Regular"
 spawn-at-startup "/home/zyuke/.config/niri/clamshell.sh"
@@ -178,12 +185,6 @@ window-rule {
     open-floating true
 }
 
-// open firefox maximized
-// window-rule {
-//     match app-id=r#"firefox(-nightly)?$"#
-//     open-maximized true
-// }
-
 binds {
     // --- Basics ---
     Mod+Q repeat=false { close-window; }
@@ -197,13 +198,12 @@ binds {
     Mod+Shift+P repeat=false { spawn "poweroff"; }
 
     // --- Screenshots ---
-    // Built-in niri screenshot
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
     // Custom grim+slurp shots
     Mod+Shift+Z { spawn-sh "grim -g \"$(slurp)\" ~/images/screenshots/$(date +'%Y-%m-%d-%H:%M:%S_grim.png')"; }
     Mod+Shift+A { spawn-sh "grim -g \"$(slurp -o)\" ~/images/screenshots/$(date +'%Y-%m-%d-%H:%M:%S_grim.png')"; }
+
+    // clipboard fuzzel search
+    Mod+C { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
 
     // Hotkey overlay
     Mod+Shift+Slash { show-hotkey-overlay; }
@@ -307,8 +307,6 @@ binds {
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
     Mod+Ctrl+F { expand-column-to-available-width; }
-
-    Mod+C { center-column; }
 
     // Center all fully visible columns on screen.
     Mod+Ctrl+C { center-visible-columns; }
